@@ -8,8 +8,10 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class menu_principal extends JFrame {
+public class menu_principal extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -18,21 +20,11 @@ public class menu_principal extends JFrame {
 	private JMenu mnNewMenu_1;
 	private JMenu mnNewMenu_2;
 	private JMenu mnNewMenu_3;
-	private JMenu mnNewMenu_4;
+	private JMenuItem generarVenta;
+	private JMenuItem nuevoStock;
+	private JMenuItem generarReporte;
 	private JMenuItem mntmNewMenuItem;
 	private JMenuItem mntmNewMenuItem_1;
-	private JMenu mnNewMenu_5;
-	private JMenuItem mntmNewMenuItem_2;
-	private JMenuItem mntmNewMenuItem_3;
-	private JMenu mnNewMenu_6;
-	private JMenuItem mntmNewMenuItem_4;
-	private JMenuItem mntmNewMenuItem_5;
-	private JMenu mnNewMenu_7;
-	private JMenuItem mntmNewMenuItem_6;
-	private JMenuItem mntmNewMenuItem_7;
-	private JMenu mnNewMenu_8;
-	private JMenuItem mntmNewMenuItem_8;
-	private JMenuItem mntmNewMenuItem_9;
 
 	/**
 	 * Launch the application.
@@ -70,58 +62,32 @@ public class menu_principal extends JFrame {
 		mnNewMenu = new JMenu("Mantenimiento");
 		menuBar.add(mnNewMenu);
 		
-		mnNewMenu_4 = new JMenu("Ingreso");
-		mnNewMenu.add(mnNewMenu_4);
-		
 		mntmNewMenuItem = new JMenuItem("Cliente");
-		mnNewMenu_4.add(mntmNewMenuItem);
+		mnNewMenu.add(mntmNewMenuItem);
 		
 		mntmNewMenuItem_1 = new JMenuItem("Producto");
-		mnNewMenu_4.add(mntmNewMenuItem_1);
-		
-		mnNewMenu_5 = new JMenu("Modificacion");
-		mnNewMenu.add(mnNewMenu_5);
-		
-		mntmNewMenuItem_2 = new JMenuItem("Cliente");
-		mnNewMenu_5.add(mntmNewMenuItem_2);
-		
-		mntmNewMenuItem_3 = new JMenuItem("Prodcuto");
-		mnNewMenu_5.add(mntmNewMenuItem_3);
-		
-		mnNewMenu_6 = new JMenu("Consulta");
-		mnNewMenu.add(mnNewMenu_6);
-		
-		mntmNewMenuItem_4 = new JMenuItem("Cliente");
-		mnNewMenu_6.add(mntmNewMenuItem_4);
-		
-		mntmNewMenuItem_5 = new JMenuItem("Producto");
-		mnNewMenu_6.add(mntmNewMenuItem_5);
-		
-		mnNewMenu_7 = new JMenu("Eliminacion");
-		mnNewMenu.add(mnNewMenu_7);
-		
-		mntmNewMenuItem_6 = new JMenuItem("Cliente");
-		mnNewMenu_7.add(mntmNewMenuItem_6);
-		
-		mntmNewMenuItem_7 = new JMenuItem("Producto");
-		mnNewMenu_7.add(mntmNewMenuItem_7);
-		
-		mnNewMenu_8 = new JMenu("Listado");
-		mnNewMenu.add(mnNewMenu_8);
-		
-		mntmNewMenuItem_8 = new JMenuItem("Cliente");
-		mnNewMenu_8.add(mntmNewMenuItem_8);
-		
-		mntmNewMenuItem_9 = new JMenuItem("Producto");
-		mnNewMenu_8.add(mntmNewMenuItem_9);
+		mnNewMenu.add(mntmNewMenuItem_1);
 		
 		mnNewMenu_1 = new JMenu("Ventas");
 		menuBar.add(mnNewMenu_1);
 		
+		generarVenta = new JMenuItem("Generar Venta");
+		mnNewMenu_1.add(generarVenta);
+		
 		mnNewMenu_2 = new JMenu("Almacen");
 		menuBar.add(mnNewMenu_2);
 		
+		nuevoStock = new JMenuItem("Nuevo Stock");
+		mnNewMenu_2.add(nuevoStock);
+		
 		mnNewMenu_3 = new JMenu("Reportes");
 		menuBar.add(mnNewMenu_3);
+		
+		generarReporte = new JMenuItem("Generar Reporte");
+		mnNewMenu_3.add(generarReporte);
 	}
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+
 }
